@@ -30,7 +30,7 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |password|integer|null: false|
-|user_name|string|null: false|
+|name|string|null: false|
 
 
 ### Association
@@ -45,8 +45,8 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|string|null: false, foreign_key: true|
 |group_id|string|null: false, foreign_key: true|
-|text|string|null: false|
-|image|string|null: false|
+|text|string|
+|image|string|
 
 ### Association
 - belongs_to :group
@@ -56,12 +56,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
  ### Association
  - has_many :users through: groups_users
  - has_many :messages
- - has_many :group_user
+ - has_many :groups_users
 
 
 
