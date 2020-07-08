@@ -52,6 +52,20 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|string|[null: false, foreign_key: true]
+|message_id|string|[null: false, foreign_key: true]
+|group_user_id|string|[null: false, foreign_key: true]
+
+ ### Association
+ - belongs_to :user
+ - belongs_to :message
+ - has_many :group_user
+
+
 
 * Database initialization
 
