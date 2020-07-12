@@ -6,7 +6,8 @@
         Member：
         %li.header-list 
           masa
-    %a.header-right(href="#") Edit
+    .header-right
+      = link_to "Edit", "#"
   .message-field
     .message-box
       .message-list
@@ -23,9 +24,9 @@
   .footer
     .form
       .form-content
-        %input.new-message{:type => "text", :placeholder => "type a message"}
+        %input.new-message{type: "text", placeholder: "type a message"}
           .photo
             %label{class: "photo__image"}
               = icon("far", "image photo")
-              %input{type: "file",class: "photo__file"}
-      %input.submit-btn{:type => "submit", :value => "Send"}
+        %input{type: "file", class: "photo__file"}
+      %input.submit-btn{type: "submit", value: "Send"}
