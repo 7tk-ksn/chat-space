@@ -35,10 +35,13 @@
       width: 300px;
       padding: 20px 20px 0;
       .list {
-        color: #ffffff;
         .group-name {
           font-size: 15px;
           padding-bottom: 5px;
+          }
+          a {
+          color: #ffffff;
+          text-decoration: none;
         }
         .group-message {
             font-size: 11px;

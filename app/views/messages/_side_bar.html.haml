@@ -3,11 +3,15 @@
     .top-items
       = current_user.name
       .icon 
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('far', "edit pencil_white")
         = link_to edit_user_path(current_user) do
           = icon('fas', "cog round_white")
   .group-list 
-    .list
-      %p.group-name techcamp
-      %p.group-message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .list
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group-message
+            メッセージはまだありません
